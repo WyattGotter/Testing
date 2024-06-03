@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #dropZone {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            z-index: 10;
+            position: relative;
+        }
+        #controls {
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+            position: relative;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dropZone">Drop your audio files here</div>
+    <div id="controls">
+        <button id="playButton" disabled>Play</button>
+        <button id="pauseButton" disabled>Pause</button>
+    </div>
+    <canvas id="visualizer"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
